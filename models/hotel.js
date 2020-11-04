@@ -1,25 +1,15 @@
-
-module.exports = function(sequelize, DataTypes) {
-    var Guest = sequelize.define("Guest", {
-
+module.exports = function(sequelize, DataTypes){
+    var Guest = sequelize.define( "Guest", {
         name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            
-        },
+            type: DataTypes.STRING
 
+        },
         rooms: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
+            type: DataTypes.INTEGER
         },
-
         phone: {
-            type: DataTypes.INTEGER,
-            defaultValue: 3038675309,
-            validate: {
-                len: [10],
-            }
-        },
-    });
-    return Guest;
-};
+            type: DataTypes.INTEGER
+        }
+    })
+    return Guest
+}
