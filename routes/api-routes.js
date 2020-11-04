@@ -10,5 +10,5 @@ module.exports = function(app) {
             console.log(result);
         })
     })
-    // res.json(result)
+   
 }
