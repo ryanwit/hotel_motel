@@ -33,6 +33,12 @@
     <div class = "col s7 card">
 
       <p> second card here</p>
+      <ul>
+        {{#each Guest}}
+        {{this.name}}
+        {{this.rooms}}
+        {{/each}}
+      </ul>
 
     </div>
 

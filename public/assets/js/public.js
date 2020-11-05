@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
  
     $("#create-guest").on("click", function(event) {
@@ -19,13 +20,20 @@ $(document).ready(function() {
                 console.log("Successfully added a new guest!");
                 //reload page to get updated list
                 location.reload();
+                displayPost();
             }
         );
     })
-
-
-
+  
 });
+
+function displayPost(data){
+    var guestData = data
+    $.get("/api/guests" + guestData, function(data){
+        console.log(data)
+        initializeRows();
+    })
+}
 
 
 
