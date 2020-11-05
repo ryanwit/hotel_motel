@@ -1,6 +1,18 @@
-<div class="container">
+<div class="container-fluid">
 
-  <div class="row">
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Logo</a>
+     
+    </div>
+  </nav>
+  
+  
+
+
+  <div class="row adjust">
 
     <div class="col s5 card">
 
@@ -28,9 +40,9 @@
 
     </div>
 
-    
+    <div class ="col s1"></div>
 
-    <div class = "col s7 card">
+    <div class="col s6 card adjust">
 
       <p> second card here</p>
       <ul>
@@ -40,11 +52,40 @@
         {{/each}}
       </ul>
 
+      <ul>
+
+        {{#each Guest}}
+
+        <li>
+          {{this.name}}
+          {{this.rooms}}
+          {{this.phone}}
+        </li>
+          
+      
+
+        {{/each}}
+
+      </ul>
+
     </div>
 
 
 
 
+  </div>
+
+  <div class = "row">
+
+    <div class = "col s5 card">
+      third card here
+    </div>
+
+    <div class = "col s1"></div>
+
+    <div class = "col s6 card">
+      fourth card here
+    </div>
   </div>
 
 
