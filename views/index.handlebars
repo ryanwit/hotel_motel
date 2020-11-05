@@ -46,22 +46,13 @@
 
       <p> second card here</p>
       <ul>
-        {{#each Guest}}
-        {{this.name}}
-        {{this.rooms}}
-        {{/each}}
-      </ul>
-
-      <ul>
+       
 
         {{#each Guest}}
-
-        <li>
-          {{this.name}}
-          {{this.rooms}}
-          {{this.phone}}
-        </li>
-          
+          {{#if status}}
+            {{> guests/guest-block status=false}}
+          {{/if}}
+        {{/else}}
       
 
         {{/each}}
