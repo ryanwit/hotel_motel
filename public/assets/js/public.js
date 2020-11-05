@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
  
     $("#create-guest").on("click", function(event) {
@@ -19,15 +20,12 @@ $(document).ready(function() {
                 console.log(data);
                 //reload page to get updated list
                 location.reload();
+                displayPost();
             }
         );
     })
 
-
-
-
 });
-
 
 
 

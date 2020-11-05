@@ -17,8 +17,6 @@ module.exports = function(app) {
             phone: req.body.phone
         })
         .then(function(result) {
-            //send back the ID of the new burger
-            //res.json({id:result.insertId})
             res.json(result)
               console.log(result)
         });

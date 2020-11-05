@@ -45,6 +45,12 @@
     <div class="col s6 card adjust">
 
       <p> second card here</p>
+      <ul>
+        {{#each Guest}}
+        {{this.name}}
+        {{this.rooms}}
+        {{/each}}
+      </ul>
 
       <ul>
 
