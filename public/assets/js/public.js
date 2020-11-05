@@ -7,11 +7,11 @@ $(document).ready(function() {
         // Creates new guest
         var newGuest = {
             name: $("#guest-name").val().trim(),
-            rooms: $("#guest-room-count"),
-            phone: $("#guest-phone")
-        };
+            rooms: $("#guest-room-count").val().trim(),
+            phone: $("#guest-phone").val().trim()
+        }
         // Send the POST request
-        $.ajax("/api/guests", {
+        $.ajax("/api/guests",  {
             type: "POST",
             data: newGuest
         }).then(
