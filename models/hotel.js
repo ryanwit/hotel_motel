@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER
         },
         phone: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         }
     });
     return Guest
