@@ -20,6 +20,9 @@ module.exports = function(app) {
             //send back the ID of the new burger
             //res.json({id:result.insertId})
             res.json(result)
+              console.log(result)
         });
     });   
+
+   
 };

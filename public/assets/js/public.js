@@ -15,8 +15,8 @@ $(document).ready(function() {
             type: "POST",
             data: newGuest
         }).then(
-            function() {
-                console.log("Successfully added a new guest!");
+            function(data) {
+                console.log(data);
                 //reload page to get updated list
                 location.reload();
             }
@@ -25,7 +25,9 @@ $(document).ready(function() {
 
 
 
+
 });
+
 
 
 

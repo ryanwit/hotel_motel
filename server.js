@@ -19,16 +19,22 @@ app.use(express.json());
 var exphbs = require("express-handlebars");
 
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+const handlebarsConfig = {
+  defaultLayout: "main", 
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true
+  } 
+}
+app.engine("handlebars", exphbs(handlebarsConfig));
 app.set("view engine", "handlebars");
-
 
 require("./routes/api-routes.js")(app); // Routes
 require("./routes/html-routes.js")(app); // Routes
 
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT);
   });
