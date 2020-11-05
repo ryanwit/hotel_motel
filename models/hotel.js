@@ -11,6 +11,11 @@ module.exports = function(sequelize, DataTypes) {
         },
         phone: {
             type: DataTypes.STRING
+        },
+        status: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+            
         }
     });
     return Guest

@@ -20,10 +20,32 @@ $(document).ready(function() {
                 console.log(data);
                 //reload page to get updated list
                 location.reload();
-                displayPost();
+                
             }
         );
-    })
+    });
+    
+        $(".change-status").on("click", function(event) {
+          var id = $(this).data("id");
+          var newStatus = $(this).data("newStatus");
+      
+          var newStatusState = {
+            status: newStatus
+          };
+      
+          // Send the PUT request.
+          $.ajax("/api/guests/" + id, {
+            type: "PUT",
+            data: newStatusState
+          }).then(
+            function() {
+              console.log("changed status to", newStatus);
+              // Reload the page to get the updated list
+              location.reload();
+            }
+          );
+        
+        });
 
 });
 
