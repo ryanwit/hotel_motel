@@ -5,11 +5,11 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Logo</a>
-     
+
     </div>
   </nav>
-  
-  
+
+
 
 
   <div class="row adjust">
@@ -40,25 +40,37 @@
 
     </div>
 
-    <div class ="col s1"></div>
+    <div class="col s1"></div>
 
     <div class="col s6 card adjust">
 
-      <p> second card here</p>
+      <p> Guests who have arrived:</p>
       <ul>
-       
-
         {{#each Guest}}
-          {{#if status}}
-            {{> guests/guest-block status=false}}
-          {{/if}}
-        {{/else}}
-      
-
+        <li>
+          {{name}}
+          {{#unless status}}
+          <button class="change-status btn" data-id="{{id}}" data-newStatus="{{status}}">
+            CHECK IN
+          </button>
+        </li>
+        {{/unless}}
         {{/each}}
-
       </ul>
 
+      <p> Guests who are checked in:</p>
+      <ul>
+        {{#each Guest}}
+        <li>
+          {{name}}
+          {{#if status}}
+          <button class="change-status btn" data-id="{{id}}" data-newStatus="{{status}}">
+            CHECK IN
+          </button>
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
     </div>
 
 
@@ -66,15 +78,15 @@
 
   </div>
 
-  <div class = "row">
+  <div class="row">
 
-    <div class = "col s5 card">
+    <div class="col s5 card">
       third card here
     </div>
 
-    <div class = "col s1"></div>
+    <div class="col s1"></div>
 
-    <div class = "col s6 card">
+    <div class="col s6 card">
       fourth card here
     </div>
   </div>
