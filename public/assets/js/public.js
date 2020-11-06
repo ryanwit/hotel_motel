@@ -27,12 +27,13 @@ $(document).ready(function() {
     
         $(".change-status").on("click", function(event) {
           var id = $(this).data("id");
+          console.log(id)
           var newStatus = $(this).data("newStatus");
       
           var newStatusState = {
             status: newStatus
           };
-      
+          console.log(status)
           // Send the PUT request.
           $.ajax("/api/guests/" + id, {
             type: "PUT",

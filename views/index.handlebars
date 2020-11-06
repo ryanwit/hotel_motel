@@ -35,9 +35,6 @@
         </div>
         <button type="submit" class="btn btn-primary" id="create-guest">Submit Reservation</button>
       </form>
-
-
-
     </div>
 
     <div class="col s1"></div>
@@ -46,51 +43,35 @@
 
       <p> Guests who have arrived:</p>
       <ul>
+
         {{#each Guest}}
-        <li>
-          {{name}}
-          {{#unless status}}
-          <button class="change-status btn" data-id="{{id}}" data-newStatus="{{status}}">
-            CHECK IN
-          </button>
-        </li>
+        {{name}}
+        {{#unless status}}
+        {{> guests/guests-block status=true}}
         {{/unless}}
         {{/each}}
-      </ul>
 
-      <p> Guests who are checked in:</p>
-      <ul>
-        {{#each Guest}}
-        <li>
-          {{name}}
+      </ul>
+    </div>
+
+    <div class="row">
+
+      <div class="col s5 card">
+        third card here
+      </div>
+
+      <div class="col s1"></div>
+
+      <div class="col s6 card">
+        <p> Guests who are checked in:</p>
+        <ul>
+          {{#each Guest}}
           {{#if status}}
-          <button class="change-status btn" data-id="{{id}}" data-newStatus="{{status}}">
-            CHECK IN
-          </button>
-        </li>
-        {{/if}}
-        {{/each}}
-      </ul>
-    </div>
-
-
-
-
-  </div>
-
-  <div class="row">
-
-    <div class="col s5 card">
-      third card here
-    </div>
-
-    <div class="col s1"></div>
-
-    <div class="col s6 card">
-      fourth card here
+          {{> guests/guests-block status=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
   </div>
-
-
-
 </div>
