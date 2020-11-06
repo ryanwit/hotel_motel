@@ -21,11 +21,16 @@ module.exports = function (app) {
   });
 
   app.put("/api/guests/:id", function(req,res){
-    db.Guest.update({
+    db.Guest.update(
+      req.body,
+      {
       where: {
         id: req.params.id
       },
       
+    }).then(function(result){
+      res.json(result)
+      console.log(result)
     })
   })
 

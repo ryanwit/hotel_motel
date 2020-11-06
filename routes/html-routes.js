@@ -14,6 +14,17 @@ module.exports = function(app) {
     })
   });
 
+  app.get("/guests/:id", function(req, res){
+    db.Guest.findOne({
+      where:
+      {
+        id:req.params.id
+      },
+    }).then(function(response){
+      console.log(response)
+      res.render("index")
+    })
+  })
 
 
 
