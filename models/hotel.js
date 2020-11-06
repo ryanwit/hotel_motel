@@ -3,6 +3,11 @@ module.exports = function(sequelize, DataTypes) {
 
     // Create table "Guests" with columns name, rooms, and phone
     var Guest = sequelize.define( "Guest", {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
         name: {
             type: DataTypes.STRING
         },
@@ -14,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         status: {
             type: DataTypes.BOOLEAN,
-            defaultValue: false
+           
             
         }
     });
