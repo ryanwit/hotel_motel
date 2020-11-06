@@ -7,7 +7,9 @@
   </nav>
   <div class="row adjust">
 
-    <div class="col s5 card">
+    <div class= "col s1"></div>
+
+    <div class="col s4 card" style = "margin-top: 40px; height: 300px;">
 
       <form>
         <div class="form-group">
@@ -22,19 +24,16 @@
           <label for="exampleInputPassword1">Guest phone number:</label>
           <input type="text" class="form-control" id="guest-phone">
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Maybe switch for check in</label>
-        </div>
-        <button type="submit" class="btn btn-primary" id="create-guest">Submit Reservation</button>
+        
+        <button type="submit" class="btn btn-primary" id="create-guest" style = "margin-top: 20px;margin-left: 130px;">Submit Reservation</button>
       </form>
     </div>
 
     <div class="col s1"></div>
 
-    <div class="col s6 card adjust">
+    <div class="col s5 card adjust" style = "margin-top: 40px; max-height: 300px; overflow-y: auto;">
 
-      <p> Guests who have arrived:</p>
+       <p> Guests who have arrived:</p>
       <ul>
         {{#each Guest}}
         {{#unless status}}
@@ -42,23 +41,38 @@
         {{/unless}}
         {{/each}}
       </ul>
+   
+
+
     </div>
 
-    <div class="row">
-      <div class="col s5 card">
+  
+     
+
+    <div class= "col s1"></div>
+
+  </div>
+
+
+  <div class="row">
+      <div class ="col s1"></div>
+      <div class="col s4 card" style = "height: 300px; margin-top: 40px;">
         third card here
       </div>
       <div class="col s1"></div>
-      <div class="col s6 card">
+      <div class="col s5 card" style = "margin-top: 40px; max-height: 300px; overflow-y: auto;">
         <p> Guests who are checked in:</p>
         <ul>
           {{#each Guest}}
           {{#if status}}
           {{> guests/guests-block status=false}}
+          <button class= "btn btn-primary delete" data-id="{{this.id}}">Check Out</button>
           {{/if}}
           {{/each}}
+          
         </ul>
       </div>
-    </div>
+      <div class ="col s1"></div>
   </div>
+  
 </div>
