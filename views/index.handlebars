@@ -1,17 +1,10 @@
 <div class="container-fluid">
-
-
-
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Logo</a>
 
     </div>
   </nav>
-
-
-
-
   <div class="row adjust">
 
     <div class="col s5 card">
@@ -43,24 +36,19 @@
 
       <p> Guests who have arrived:</p>
       <ul>
-
         {{#each Guest}}
         {{#unless status}}
         {{> guests/guests-block status=true}}
         {{/unless}}
         {{/each}}
-
       </ul>
     </div>
 
     <div class="row">
-
       <div class="col s5 card">
         third card here
       </div>
-
       <div class="col s1"></div>
-
       <div class="col s6 card">
         <p> Guests who are checked in:</p>
         <ul>

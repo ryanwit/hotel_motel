@@ -30,16 +30,17 @@ $(document).ready(function() {
           console.log(id)
           var newStatus = $(this).attr("data-newStatus") ;
           console.log(newStatus)
-      
-          
-          
           // Send the PUT request.
+          var newState= {
+            status : newStatus
+          }
           $.ajax("/api/guests/" + id, {
             type: "PUT",
-            data: newStatus
+            data: newState
           }).then(
-            function() {
-              console.log("changed status to", newStatus);
+            function(response) {
+              console.log("changed status to", newState);
+              console.log(response)
               // Reload the page to get the updated list
               location.reload();
             }
