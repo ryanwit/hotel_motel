@@ -34,4 +34,18 @@ module.exports = function (app) {
     })
   })
 
+  app.delete("api/guests/:id", function (req,res){
+    db.Guest.destroy(req.body, {
+      
+        where: {
+          id: req.params.id
+        }
+      
+    }).then(function(result){
+      res.json(result)
+    })
+  })
+  
+
 }
+
