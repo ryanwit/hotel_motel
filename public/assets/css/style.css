@@ -6,3 +6,14 @@
 
 
 }
+.tile{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    background-color: grey;
+    border: 2px solid black;
+    font-size: 3%;
+}
+h3 {
+    font-size: 100px;
+}
