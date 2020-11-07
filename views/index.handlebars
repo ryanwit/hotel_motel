@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style ="display:none;">
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Logo</a>
@@ -152,3 +152,31 @@
   </div>
 
 </div>
+<div class="container-fluid" style="display:block" id="vanta">
+<div class="row">
+  <div class="col s3"></div>
+  <div class="col s6 card" style="margin-top: 300px; height:200px">
+    
+  <p style="text-align: center;
+    ">
+    Splash Page
+  </p>
+  <button style="margin-left: 182px"> Click Me</button>
+</div>
+<div class="col s3"></div>
+</div> 
+</div>
+
+
+<script>
+VANTA.CLOUDS2({
+  el: "#vanta",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  texturePath: "./gallery/noise.png"
+})
+</script>
