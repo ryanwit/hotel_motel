@@ -155,7 +155,7 @@
 <div class="container-fluid" style="display:block" id="vanta">
 <div class="row">
   <div class="col s3"></div>
-  <div class="col s6 card" style="margin-top: 300px; height:200px">
+  <div class="col s6 card opaque" style="margin-top: 400px; margin-bottom: 300px; height:200px; background-color: rgba(0,0, 0, 0);">
     
   <p style="text-align: center;
     ">
@@ -164,12 +164,16 @@
   <button style="margin-left: 182px"> Click Me</button>
 </div>
 <div class="col s3"></div>
-</div> 
+<div class = "row">
+  <div class = "col s12"></div>
 </div>
+</div>
+</div> 
+
 
 
 <script>
-VANTA.CLOUDS2({
+VANTA.BIRDS({
   el: "#vanta",
   mouseControls: true,
   touchControls: true,
@@ -177,6 +181,9 @@ VANTA.CLOUDS2({
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
-  texturePath: "./gallery/noise.png"
+  scaleMobile: 1.00,
+  backgroundColor: 0x1e2537,
+  color1: 0x23845c
 })
 </script>
+
