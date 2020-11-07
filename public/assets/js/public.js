@@ -1,4 +1,22 @@
 $(document).ready(function () {
+  var occupancy = 0;
+  $.ajax("api/guests", {
+    type: "GET",
+  }).then(function (response) {
+    occupancy = 0;
+    response.forEach((room) => {
+      return (occupancy += room.rooms);
+    });
+    renderOccupancy();
+    console.log(response);
+  });
+
+  function renderOccupancy() {
+    for (i = 0; i < occupancy; i++) {
+      $(`#tile${i + 1}`).text("X");
+    }
+  }
+
   $("#create-guest").on("click", function (event) {
     event.preventDefault();
 
@@ -20,6 +38,7 @@ $(document).ready(function () {
   });
 
   $(".change-status").on("click", function (event) {
+    // renderOccupancy();
     var id = $(this).data("id");
     console.log(id);
     var newStatus = $(this).attr("data-newStatus");
@@ -41,7 +60,6 @@ $(document).ready(function () {
 
   $(".delete").on("click", function () {
     var id = $(this).data("id");
-
     console.log(id);
     $.ajax({
       method: "DELETE",
