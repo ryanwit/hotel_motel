@@ -33,7 +33,7 @@ $(document).ready(function () {
     }).then(function (data) {
       console.log(data);
       //reload page to get updated list
-      location.reload();
+      window.location.reload();
     });
   });
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
       console.log("changed status to", newState);
       console.log(response);
       // Reload the page to get the updated list
-      location.reload();
+      window.location.reload();
     });
   });
 
@@ -65,10 +65,34 @@ $(document).ready(function () {
       method: "DELETE",
       url: "/api/guests/" + id,
     }).then(function () {
-      location.reload();
+      window.location.reload();
     });
   });
+
+  VANTA.BIRDS({
+    el: "#vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    backgroundColor: 0x1e2537,
+    color1: 0x23845c
+  })
+
+  $("#enterbtn").on("click", function (e) {
+    console.log("click")
+    $("#vanta").css("display", "none")        
+    $("#show").css("display", "block")
+    e.preventDefault()
+
+  })
+ 
 });
+
+
 
 
 

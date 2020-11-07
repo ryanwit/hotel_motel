@@ -1,4 +1,4 @@
-<div class="container-fluid" style ="display:none;">
+<div class="container-fluid" id="show" style="display:none;">
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Logo</a>
@@ -61,23 +61,23 @@
       <table>
         <tbody>
           <tr>
-            <td class="tile" >
+            <td class="tile">
               <p id="tile1" class="tilestyle"> 1 </p>
             </td>
             <td class="tile">
               <p id="tile2" class="tilestyle"> 2 </p>
             </td>
-            <td class="tile" >
+            <td class="tile">
               <p id="tile3" class="tilestyle"> 3 </p>
             </td>
-            <td class="tile" >
+            <td class="tile">
               <p id="tile4" class="tilestyle"> 4 </p>
             </td>
-            <td class="tile" >
+            <td class="tile">
               <p id="tile5" class="tilestyle"> 5 </p>
             </td>
           </tr>
-           <tr>
+          <tr>
             <td class="tile">
               <p id="tile6" class="tilestyle"> 6 </p>
             </td>
@@ -93,9 +93,9 @@
             <td class="tile">
               <p id="tile10" class="tilestyle"> 10 </p>
             </td>
-            
+
           </tr>
-           <tr>
+          <tr>
             <td class="tile">
               <p id="tile11" class="tilestyle"> 11 </p>
             </td>
@@ -111,9 +111,9 @@
             <td class="tile">
               <p id="tile15" class="tilestyle"> 15 </p>
             </td>
-            
+
           </tr>
-           <tr>
+          <tr>
             <td class="tile">
               <p id="tile16" class="tilestyle"> 16 </p>
             </td>
@@ -129,12 +129,12 @@
             <td class="tile">
               <p id="tile20" class="tilestyle"> 20 </p>
             </td>
-            
+
           </tr>
         </tbody>
       </table>
     </div>
-    
+
     <div class="col s1"></div>
     <div class="col s5 card" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
       <p> Guests who are checked in:</p>
@@ -153,37 +153,22 @@
 
 </div>
 <div class="container-fluid" style="display:block" id="vanta">
-<div class="row">
-  <div class="col s3"></div>
-  <div class="col s6 card opaque" style="margin-top: 400px; margin-bottom: 300px; height:200px; background-color: rgba(0,0, 0, 0);">
-    
-  <p style="text-align: center;
+  <div class="row">
+    <div class="col s3"></div>
+    <div class="col s6 card opaque"
+      style="margin-top: 400px; margin-bottom: 300px; height:200px; background-color: rgba(0,0, 0, 0);">
+
+      <p style="text-align: center;
     ">
-    Splash Page
-  </p>
-  <button style="margin-left: 182px"> Click Me</button>
+        Splash Page
+      </p>
+      <button style="margin-left: 182px" id="enterbtn"> Click Me</button>
+    </div>
+    <div class="col s3"></div>
+    <div class="row">
+      <div class="col s12"></div>
+    </div>
+  </div>
 </div>
-<div class="col s3"></div>
-<div class = "row">
-  <div class = "col s12"></div>
-</div>
-</div>
-</div> 
 
-
-
-<script>
-VANTA.BIRDS({
-  el: "#vanta",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  backgroundColor: 0x1e2537,
-  color1: 0x23845c
-})
-</script>
 
