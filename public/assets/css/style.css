@@ -12,8 +12,7 @@
     height: 10%;
     background-color: grey;
     border: 2px solid black;
-    font-size: 3%;
 }
-h3 {
-    font-size: 100px;
+.tilestyle {
+    font-size: 20px;
 }
