@@ -23,7 +23,7 @@
 
 
 
-<div class="container-fluid" id="show" style="display:none;">
+<div class="container-fluid" id="show" style="display:none; background-color: rgb(242, 242, 242);">
 
    
   <div class="vintage__container" style= "display: inline-block;  margin: 25px auto 40px;
@@ -34,7 +34,7 @@
 
   <div class="row adjust">
     <div class="col s1"></div>
-    <div class="col s4 card z-depth-3" style="margin-top: 40px; height: 350px;">
+    <div class="col s4 card z-depth-3 grey lighten-5" style="margin-top: 40px; height: 350px;">
       <form>
         <div class="form-group">
           <h5 class="navy-text text-darken-4">Guest Information</h5>
@@ -49,13 +49,13 @@
           <label for="exampleInputPassword1">Guest phone number:</label>
           <input type="text" class="form-control" id="guest-phone">
         </div>
-        <button type="submit" class="btn btn-primary" id="create-guest"
+        <button type="submit" class="btn indigo darken-3" id="create-guest"
           style="margin-top: 20px;">Submit Reservation<i class="material-icons right">group</i></button>
       </form>
     </div>
     <div class="col s1"></div>
-    <div class="col s5 card adjust z-depth-3" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-     <h5 class="navy-text text-darken-4">Guests who have arrived: </h5>
+    <div class="col s5 card adjust z-depth-3 grey lighten-5" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
+     <h5 class="navy-text text-darken-4" style= "margin-right: 150px;">Guests who have arrived: </h5>
       <ul>
         {{#each Guest}}
         {{#unless status}}
@@ -68,91 +68,91 @@
   </div>
   <div class="row">
     <div class="col s1"></div>
-    <div class="col s4 card z-depth-3" style="height: auto; margin-top: 40px;">
+    <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 40px;">
       <h5 class="navy-text text-darken-4">Daily Occupancy</h5>
       <table>
         <tbody>
           <tr>
             <td class="tile">
               <div class="tile">
-              <p id="tile1" class="tilestyle"> 1 </p>
+              <p id="tile1" class="tilestyle center"> 1 </p>
               </div>
             </td>
             <td class="tile">
-              <p id="tile2" class="tilestyle"> 2 </p>
+              <p id="tile2" class="tilestyle center"> 2 </p>
             </td>
             <td class="tile">
-              <p id="tile3" class="tilestyle"> 3 </p>
+              <p id="tile3" class="tilestyle center"> 3 </p>
             </td>
             <td class="tile">
-              <p id="tile4" class="tilestyle"> 4 </p>
+              <p id="tile4" class="tilestyle center"> 4 </p>
             </td>
             <td class="tile">
-              <p id="tile5" class="tilestyle"> 5 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile6" class="tilestyle"> 6 </p>
-            </td>
-            <td class="tile">
-              <p id="tile7" class="tilestyle"> 7 </p>
-            </td>
-            <td class="tile">
-              <p id="tile8" class="tilestyle"> 8 </p>
-            </td>
-            <td class="tile">
-              <p id="tile9" class="tilestyle"> 9 </p>
-            </td>
-            <td class="tile">
-              <p id="tile10" class="tilestyle"> 10 </p>
+              <p id="tile5" class="tilestyle center"> 5 </p>
             </td>
           </tr>
           <tr>
             <td class="tile">
-              <p id="tile11" class="tilestyle"> 11 </p>
+              <p id="tile6" class="tilestyle center"> 6 </p>
             </td>
             <td class="tile">
-              <p id="tile12" class="tilestyle"> 12 </p>
+              <p id="tile7" class="tilestyle center"> 7 </p>
             </td>
             <td class="tile">
-              <p id="tile13" class="tilestyle"> 13 </p>
+              <p id="tile8" class="tilestyle center"> 8 </p>
             </td>
             <td class="tile">
-              <p id="tile14" class="tilestyle"> 14 </p>
+              <p id="tile9" class="tilestyle center"> 9 </p>
             </td>
             <td class="tile">
-              <p id="tile15" class="tilestyle"> 15 </p>
+              <p id="tile10" class="tilestyle center"> 10 </p>
             </td>
           </tr>
           <tr>
             <td class="tile">
-              <p id="tile16" class="tilestyle"> 16 </p>
+              <p id="tile11" class="tilestyle center"> 11 </p>
             </td>
             <td class="tile">
-              <p id="tile17" class="tilestyle"> 17 </p>
+              <p id="tile12" class="tilestyle center"> 12 </p>
             </td>
             <td class="tile">
-              <p id="tile18" class="tilestyle"> 18 </p>
+              <p id="tile13" class="tilestyle center"> 13 </p>
             </td>
             <td class="tile">
-              <p id="tile19" class="tilestyle"> 19 </p>
+              <p id="tile14" class="tilestyle center"> 14 </p>
             </td>
             <td class="tile">
-              <p id="tile20" class="tilestyle"> 20 </p>
+              <p id="tile15" class="tilestyle center"> 15 </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="tile">
+              <p id="tile16" class="tilestyle center"> 16 </p>
+            </td>
+            <td class="tile">
+              <p id="tile17" class="tilestyle center"> 17 </p>
+            </td>
+            <td class="tile">
+              <p id="tile18" class="tilestyle center"> 18 </p>
+            </td>
+            <td class="tile">
+              <p id="tile19" class="tilestyle center"> 19 </p>
+            </td>
+            <td class="tile">
+              <p id="tile20" class="tilestyle center"> 20 </p>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col s1"></div>
-    <div class="col s5 card z-depth-4" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4">Checked in Guests</h5>
+    <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
+      <h5 class="navy-text text-darken-4" style= "margin-right: 200px;">Checked in Guests:</h5>
       <ul>
         {{#each Guest}}
         {{#if status}}
         {{> guests/guests-block status=false}}
-        <button class="btn btn-primary delete" data-id="{{this.id}}">Check Out<i class="material-icons right">work</i></button>
+        <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i class="material-icons right">work</i></button>
         {{/if}}
         {{/each}}
       </ul>
@@ -167,9 +167,20 @@
       style="margin-top: 400px; margin-bottom: 300px; height:200px; background-color: rgba(0,0, 0, 0);">
       <p style="text-align: center;
     ">
-        Splash Page
+     Splash Page
       </p>
-      <button style="margin-left: 182px" id="enterbtn"> Click Me</button>
+      <div class="form-group">
+            <label for="exampleInputEmail1" class= "email-label">Email address</label>
+            <input type="email" class="form-control" style= " background:#7FFFD4;
+            border-radius: 25px; opacity: 0.8; text-align:center; text-color: " id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control password-enter" id="password-input"  style= " background:#7FFFD4;
+            border-radius: 25px; opacity: 0.8" placeholder="Password">
+            <button style="margin-left: 182px" class="enterbtn"> LOGIN</button>
+            <button style="margin-right: 182px" class="enterbtn"> CONTINUE AS A GUEST</button>
+          </div>
     </div>
     <div class="col s3"></div>
     <div class="row">
@@ -177,5 +188,5 @@
     </div>
   </div>
 </div>
-
+ 
  
