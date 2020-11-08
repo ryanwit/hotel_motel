@@ -17,15 +17,3 @@
     font-size: 20px;
 }
 
-
-#vanta { 
-    position: absolute;
-    display: block;
-    min-width: 100%;
-    min-height: 100vh;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
