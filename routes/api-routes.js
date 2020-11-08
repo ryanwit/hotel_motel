@@ -13,7 +13,7 @@ module.exports = function (app) {
       name: req.body.name,
       rooms: req.body.rooms,
       phone: req.body.phone,
-      
+      amount: req.body.amount
     }).then(function (result) {
       res.json(result);
       console.log(result);
