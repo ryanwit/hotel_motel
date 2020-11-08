@@ -87,7 +87,7 @@ $(document).ready(function () {
     color1: 0x23845c
   })
 
-  $("#enterbtn").on("click", function (e) {
+  $(".enterbtn").on("click", function (e) {
     e.preventDefault()
     console.log("click")
     $("#vanta").css("display", "none").remove()        
