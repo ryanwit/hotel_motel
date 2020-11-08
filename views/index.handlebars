@@ -18,6 +18,15 @@
   color: rgb(1, 1, 44);
   }
 
+
+::placeholder { 
+    color: rgb(30,37,55);
+    opacity: 1; 
+  }
+
+.enterbtn {
+  background-color: rgb(0, 209, 255)
+}
     
 </style>
 
@@ -163,23 +172,20 @@
 <div class="container-fluid" style="display:block" id="vanta">
   <div class="row">
     <div class="col s3"></div>
-    <div class="col s6 card opaque"
-      style="margin-top: 400px; margin-bottom: 300px; height:200px; background-color: rgba(0,0, 0, 0);">
-      <p style="text-align: center;
-    ">
-     Splash Page
-      </p>
+    <div class="col s6"
+      style="margin-top: 400px; margin-bottom: 300px; height:250px; background-color: rgba(0,0, 0, 0);">
+      
       <div class="form-group">
-            <label for="exampleInputEmail1" class= "email-label">Email address</label>
-            <input type="email" class="form-control" style= " background:#7FFFD4;
-            border-radius: 25px; opacity: 0.8; text-align:center; text-color: " id="email-input" placeholder="Email">
+            
+            <input type="email" class="form-control black-text" style= " background:#7FFFD4;
+            border-radius: 25px; opacity: 1; text-align:center; text-color: " id="email-input" placeholder="Employee ID">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            
             <input type="password" class="form-control password-enter" id="password-input"  style= " background:#7FFFD4;
-            border-radius: 25px; opacity: 0.8" placeholder="Password">
-            <button style="margin-left: 182px" class="enterbtn"> LOGIN</button>
-            <button style="margin-right: 182px" class="enterbtn"> CONTINUE AS A GUEST</button>
+            border-radius: 25px; opacity: 1; text-align: center;" placeholder="Password">
+            <button  class="enterbtn btn"> LOGIN</button>
+            <button class="enterbtn btn"> CONTINUE AS A GUEST</button>
           </div>
     </div>
     <div class="col s3"></div>
