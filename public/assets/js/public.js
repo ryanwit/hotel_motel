@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   function renderOccupancy() {
     for (i = 0; i < occupancy; i++) {
-      $(`#tile${i + 1}`).text("X");
+      $(`#tile${i + 1}`).text("X").attr("class", "center green z-depth-2");
     }
   }
 
@@ -83,10 +83,11 @@ $(document).ready(function () {
   })
 
   $("#enterbtn").on("click", function (e) {
-    console.log("click")
-    $("#vanta").css("display", "none")        
-    $("#show").css("display", "block")
     e.preventDefault()
+    console.log("click")
+    $("#vanta").css("display", "none").remove()        
+    $("#show").css("display", "block")
+    
 
   })
  
