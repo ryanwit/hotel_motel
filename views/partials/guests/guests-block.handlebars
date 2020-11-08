@@ -1,6 +1,10 @@
 <li style = "height: 30px">
-	{{name}}
+	<p style="font-weight: bold;" >
+	Name: {{name}},
+	Guests: {{amount}},
+	Rooms: {{rooms}}
 	{{#if status}}
-	<button class="change-status btn indigo darken-3" data-id="{{this.id}}" data-newStatus="{{this.status}}" style= "float: right; height: 35px"> Check In<i class="material-icons right">input</i></button>{{/if}}
+	<button class="change-status btn btn-primary" data-id="{{this.id}}" data-newStatus="{{this.status}}" style= "float: right; height: 35px"> Check In</button>{{/if}}
+</p>
 </li>
 <hr>

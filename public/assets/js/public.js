@@ -13,7 +13,11 @@ $(document).ready(function () {
 
   function renderOccupancy() {
     for (i = 0; i < occupancy; i++) {
-      $(`#tile${i + 1}`).text("X").attr("class", "center green z-depth-2");
+      if (i < 20) {
+        $(`#tile${i + 1}`).text("X").attr("class", "center green z-depth-2");
+      } else {
+        alert("No rooms available");
+      }
     }
   }
 
@@ -25,6 +29,7 @@ $(document).ready(function () {
       name: $("#guest-name").val().trim(),
       rooms: $("#guest-room-count").val().trim(),
       phone: $("#guest-phone").val().trim(),
+      amount: $("#guest-count").val().trim(),
     };
     // Send the POST request
     $.ajax("/api/guests", {

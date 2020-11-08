@@ -18,9 +18,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         status: {
-            type: DataTypes.BOOLEAN,
-           
-            
+            type: DataTypes.BOOLEAN,   
+        },
+        amount: {
+            type: DataTypes.INTEGER
         }
     });
     return Guest
