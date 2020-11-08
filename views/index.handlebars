@@ -1,43 +1,41 @@
 <style>
-
-  @import url(https://fonts.googleapis.com/css?family=Satisfy); 
+  @import url(https://fonts.googleapis.com/css?family=Satisfy);
   @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
   body {
-  text-align: center;
+    text-align: center;
   }
 
 
   .vintage {
-  font-family: 'Six Caps', sans-serif;
-  font-size: 100px;
-  letter-spacing: 10px;
-  line-height: 1;
-  margin: 0;
-  position: relative;
-  color: rgb(1, 1, 44);
+    font-family: 'Six Caps', sans-serif;
+    font-size: 100px;
+    letter-spacing: 10px;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    color: rgb(1, 1, 44);
   }
 
 
-::placeholder { 
-    color: rgb(30,37,55);
-    opacity: 1; 
+  ::placeholder {
+    color: rgb(30, 37, 55);
+    opacity: 1;
   }
 
-.enterbtn {
-  background-color: rgb(0, 209, 255)
-}
-    
+  .enterbtn {
+    background-color: rgb(0, 209, 255)
+  }
 </style>
 
 
 
 <div class="container-fluid" id="show" style="display:none; background-color: rgb(242, 242, 242);">
 
-   
-  <div class="vintage__container" style= "display: inline-block;  margin: 25px auto 40px;
-  margin: 25px auto 40px;"> 
-      <p class="vintage">HOTEL MOTELS</p>
+
+  <div class="vintage__container" style="display: inline-block;  margin: 25px auto 40px;
+  margin: 25px auto 40px;">
+    <p class="vintage">HOTEL MOTELS</p>
   </div>
 
 
@@ -48,27 +46,28 @@
         <div class="form-group">
           <h5 class="navy-text text-darken-4">Guest Information</h5>
           <label for="name">Guest name:</label>
-          <input type="text" class="form-control" id="guest-name">
+          <input type="text" class="form-control" id="guest-name" style= "height: 30px;">
         </div>
         <div class="form-group">
           <label for="name">Number of Guests:</label>
-          <input type="text" class="form-control" id="guest-count">
+          <input type="text" class="form-control" id="guest-count" style= "height: 30px;">
         </div>
         <div class="form-group">
           <label for="name">Number of rooms:</label>
-          <input type="text" class="form-control" id="guest-room-count">
+          <input type="text" class="form-control" id="guest-room-count" style= "height: 30px;">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Guest phone number:</label>
-          <input type="text" class="form-control" id="guest-phone">
+          <input type="text" class="form-control" id="guest-phone" style= "height: 30px;">
         </div>
-        <button type="submit" class="btn indigo darken-3" id="create-guest"
-          style="margin-top: 20px;">Submit Reservation<i class="material-icons right">group</i></button>
+        <button type="submit" class="btn indigo darken-3" id="create-guest">Submit
+          Reservation<i class="material-icons right">group</i></button>
       </form>
     </div>
     <div class="col s1"></div>
-    <div class="col s5 card adjust z-depth-3 grey lighten-5" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-     <h5 class="navy-text text-darken-4" style= "margin-right: 150px;">Guests who have arrived: </h5>
+    <div class="col s5 card adjust z-depth-3 grey lighten-5"
+      style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
+      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guests who have arrived: </h5>
       <ul>
         {{#each Guest}}
         {{#unless status}}
@@ -88,7 +87,7 @@
           <tr>
             <td class="tile">
               <div class="tile">
-              <p id="tile1" class="tilestyle center"> 1 </p>
+                <p id="tile1" class="tilestyle center"> 1 </p>
               </div>
             </td>
             <td class="tile">
@@ -160,12 +159,13 @@
     </div>
     <div class="col s1"></div>
     <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4" style= "margin-right: 200px;">Checked in Guests:</h5>
+      <h5 class="navy-text text-darken-4" style="margin-right: 200px;">Checked in Guests:</h5>
       <ul>
         {{#each Guest}}
         {{#if status}}
         {{> guests/guests-block status=false}}
-        <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i class="material-icons right">work</i></button>
+        <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
+            class="material-icons right">work</i></button>
         {{/if}}
         {{/each}}
       </ul>
@@ -178,19 +178,20 @@
     <div class="col s3"></div>
     <div class="col s6"
       style="margin-top: 400px; margin-bottom: 300px; height:250px; background-color: rgba(0,0, 0, 0);">
-      
+
       <div class="form-group">
-            
-            <input type="email" class="form-control black-text" style= " background:#7FFFD4;
-            border-radius: 25px; opacity: 1; text-align:center; text-color: " id="email-input" placeholder="Employee ID">
-          </div>
-          <div class="form-group">
-            
-            <input type="password" class="form-control password-enter" id="password-input"  style= " background:#7FFFD4;
+
+        <input type="email" class="form-control black-text" style=" background:#7FFFD4;
+            border-radius: 25px; opacity: 1; text-align:center; text-color: " id="email-input"
+          placeholder="Employee ID">
+      </div>
+      <div class="form-group">
+
+        <input type="password" class="form-control password-enter" id="password-input" style=" background:#7FFFD4;
             border-radius: 25px; opacity: 1; text-align: center;" placeholder="Password">
-            <button  class="enterbtn btn"> LOGIN</button>
-            <button class="enterbtn btn"> CONTINUE AS A GUEST</button>
-          </div>
+        <button class="enterbtn btn"> LOGIN</button>
+        <button class="enterbtn btn"> CONTINUE AS A GUEST</button>
+      </div>
     </div>
     <div class="col s3"></div>
     <div class="row">
@@ -198,5 +199,3 @@
     </div>
   </div>
 </div>
- 
- 
