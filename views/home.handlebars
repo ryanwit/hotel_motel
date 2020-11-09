@@ -39,16 +39,19 @@
       opacity: 1;
     }
 
-    .enterbtn {
-      background-color: rgb(0, 209, 255)
-    }
+    
   </style>
 
 
-  <div class="container-fluid" id="infoGone" style="background-color: rgb(242, 242, 242);">
+  <div class="container-fluid" style="background-color: rgb(242, 242, 242); position: relative;">
 
-    <!--VINTAGE TYPEFACE -->
-    <div id="center">
+
+    <div class="col sm12 l4 right">
+      <button style="margin-right: 20px; margin-top: 30px;" class="exitbtn btn-small btn-floating indigo darken-3 waves-effect waves-light"><i class="material-icons right">exit_to_app</i></button>
+    </div>
+
+    <!--Vintage TypeFace -->
+    <div id="center" class="infoGone">
       <div class="vintage__container" style="display: inline-block; margin: 25px auto 40px;">
         <p class="vintage vintage__top">HOTEL MOTELS</p>
         <p class="vintage vintage__bot">HOTEL MOTELS</p>
@@ -56,8 +59,19 @@
     </div>
 
     <div class="row adjust">
-      <div class="col s1"></div>
-      <div class="col s4 card z-depth-3 grey lighten-5"
+
+
+      <div class="container" style="position: absolute; z-index: 10; margin-left: 200px;">
+        <div class="show card" style="display: none; max-height: 400px; overflow-y: auto; margin-top: 200px">
+          <button class="exit btn" style="float: right; margin-right: 40px;margin-top: 25px;">Exit</button>
+          <h1 class="guestInfo center">Guest Information</h1>
+          <p class="info"></p>
+
+        </div>
+
+      </div>
+      <div class="col s1 infoGone"></div>
+      <div class="col s4 card z-depth-3 grey lighten-5 infoGone"
         style="margin-top: 40px; height: 500px; font-family: sans-serif;">
         <form>
           <div class="form-group">
@@ -90,7 +104,7 @@
         </form>
       </div>
       <div class="col s1"></div>
-      <div class="col s5 card adjust z-depth-3 grey lighten-5"
+      <div class="col s5 card adjust z-depth-3 grey lighten-5 infoGone"
         style="margin-top: 40px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
         <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-In:</h5>
         <ul>
@@ -103,7 +117,8 @@
       </div>
       <div class="col s1"></div>
     </div>
-    <div class="row">
+
+    <div class="row infoGone">
       <div class="col s1"></div>
       <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 20px; font-family: sans-serif;"
         id="infoShow">
@@ -201,17 +216,4 @@
       <div class="col s1"></div>
     </div>
   </div>
-</div>
-
-<div class="container">
-  <div class="show card" style="display: none; max-height: 300px; overflow-y: auto; margin-top: 200px">
-    <button class="exit btn" style="float: right; margin-right: 40px;margin-top: 25px;">Exit</button>
-    <h1 class="guestInfo center">Guest Information</h1>
-    <p class="info"></p>
-
-  </div>
-
-
-
-
 </div>
