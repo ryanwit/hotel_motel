@@ -48,7 +48,7 @@ $(document).ready(function () {
          
 
         $(".show").css("display", "block")
-        $("#infoGone").css("display", "none")
+        $(".infoGone").css("opacity", ".3")
 
         
 
@@ -143,10 +143,16 @@ $(document).ready(function () {
   $(".exit").on("click", function(e){
     e.preventDefault()
     $(".show").css("display", "none")
-    $("#infoGone").css("display", "block")
+    $(".infoGone").css("opacity", "1")
    
 
   })
+
+  $(".exitbtn").on("click", function (e) {
+    e.preventDefault()
+    console.log("click")
+    window.location.href = "/"
+  });
  
 });
 
