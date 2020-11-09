@@ -23,13 +23,46 @@ $(document).ready(function () {
      
       
     }
+  
 
     var answers = response
-    $(`#tile${i + 1}`).on("click", function(){
+    $("#infoShow").on("click", function(){
+      $(".remove").empty()
       for (i = 0; i<answers.length; i++){
-        console.log(answers[i])
+        console.log(answers[i].name + " " + answers[i].phone + " " + answers[i].checkin)
+
+         $(".show").append(`<div class="remove">
+         <p><span class = "bold">Guest Name:</span> ${answers[i].name}</p>
+
+         <p><span class="bold">Guest Phone Number:</span> ${answers[i].phone}</p>
+         <p><span class="bold"> Rooms:</span> ${answers[i].rooms}</p>
+         <p><span class="bold"> Check-In: </span> ${answers[i].checkin}</p>
+         <p><span class="bold"> Check-Out: </span> ${answers[i].checkout}</p>
+
+          <hr>
+          </div`)
+
+        $(".bold").css("font-weight", "bold")
+        $(".remove").css("margin-left", "40px")
+        $(".remove").css("margin-right", "40px")
+         
+
+        $(".show").css("display", "block")
+        $("#infoGone").css("display", "none")
+
+        
+
+        
+
+        
+       
+
+        
       }
+     
     })
+
+  
     
   }
 
@@ -104,6 +137,16 @@ $(document).ready(function () {
   $(function() {
     $("#checkout").datepicker();
   });
+
+  
+          
+  $(".exit").on("click", function(e){
+    e.preventDefault()
+    $(".show").css("display", "none")
+    $("#infoGone").css("display", "block")
+   
+
+  })
  
 });
 

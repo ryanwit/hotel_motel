@@ -1,203 +1,217 @@
 <div>
-<style>
-  @import url(https://fonts.googleapis.com/css?family=Satisfy); 
-  @import url(https://fonts.googleapis.com/css?family=Six+Caps);
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Satisfy);
+    @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
-  #center {
-    text-align: center;
-  }
-
-
-  .vintage {
-    font-family: 'Six Caps', sans-serif;
-    font-size: 150px;
-    letter-spacing: 10px;
-    line-height: 1;
-    margin: 0;
-    position: relative;
-  }
-
-  .vintage__top {
-    background: linear-gradient(rgb(1, 1, 44), rgb(1, 1, 44));
-    -webkit-background-clip: text;
-    background-clip: text;
-    position: absolute;
-    z-index: 1;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .vintage__bot {
-    text-shadow: 
-      1px 1px ,
-      4px 2px rgb(160,225,220),
-      6px 4px rgb(165, 230, 225),
-      
-  }
-
-  ::placeholder {
-    color: rgb(30, 37, 55);
-    opacity: 1;
-  }
-
-  .enterbtn {
-    background-color: rgb(0, 209, 255)
-  }
-</style>
+    #center {
+      text-align: center;
+    }
 
 
-<div class="container-fluid" id="show" style="background-color: rgb(242, 242, 242);">
+    .vintage {
+      font-family: 'Six Caps', sans-serif;
+      font-size: 150px;
+      letter-spacing: 10px;
+      line-height: 1;
+      margin: 0;
+      position: relative;
+    }
 
-  <!--Vintage TypeFace -->
- <div id="center">
-    <div class="vintage__container" style= "display: inline-block; margin: 25px auto 40px;" > 
-      <p class="vintage vintage__top">HOTEL MOTELS</p>
-      <p class="vintage vintage__bot">HOTEL MOTELS</p>
+    .vintage__top {
+      background: linear-gradient(rgb(1, 1, 44), rgb(1, 1, 44));
+      -webkit-background-clip: text;
+      background-clip: text;
+      position: absolute;
+      z-index: 1;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .vintage__bot {
+      text-shadow:
+        1px 1px,
+        4px 2px rgb(160, 225, 220),
+        6px 4px rgb(165, 230, 225),
+
+    }
+
+    ::placeholder {
+      color: rgb(30, 37, 55);
+      opacity: 1;
+    }
+
+    .enterbtn {
+      background-color: rgb(0, 209, 255)
+    }
+  </style>
+
+
+  <div class="container-fluid" id="infoGone" style="background-color: rgb(242, 242, 242);">
+
+    <!--Vintage TypeFace -->
+    <div id="center">
+      <div class="vintage__container" style="display: inline-block; margin: 25px auto 40px;">
+        <p class="vintage vintage__top">HOTEL MOTELS</p>
+        <p class="vintage vintage__bot">HOTEL MOTELS</p>
+      </div>
     </div>
-  </div>
 
-  <div class="row adjust">
-    <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="margin-top: 40px; height: 500px; font-family: sans-serif;">
-      <form>
-        <div class="form-group">
-          <h5 class="navy-text text-darken-4">Guest Information:</h5>
-          <label for="name">Guest name:</label> 
-          <input type="text" class="form-control" id="guest-name" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Number of Guests:</label>
-          <input type="text" class="form-control" id="guest-count" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Number of rooms:</label>
-          <input type="text" class="form-control" id="guest-room-count" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Check-in Date: </label>
-          <input type="text" class="form-control" id="checkin" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Check-out Date: </label>
-          <input type="text" class="form-control" id="checkout" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Guest phone number:</label>
-          <input type="text" class="form-control" id="guest-phone" style= "height: 30px;">
-        </div>
-        <button type="submit" class="btn indigo darken-3" id="create-guest">Submit
-          Reservation<i class="material-icons right">group</i></button>
-      </form>
+    <div class="row adjust">
+      <div class="col s1"></div>
+      <div class="col s4 card z-depth-3 grey lighten-5"
+        style="margin-top: 40px; height: 500px; font-family: sans-serif;">
+        <form>
+          <div class="form-group">
+            <h5 class="navy-text text-darken-4">Guest Information:</h5>
+            <label for="name">Guest name:</label>
+            <input type="text" class="form-control" id="guest-name" style="height: 30px;">
+          </div>
+          <div class="form-group">
+            <label for="name">Number of Guests:</label>
+            <input type="text" class="form-control" id="guest-count" style="height: 30px;">
+          </div>
+          <div class="form-group">
+            <label for="name">Number of rooms:</label>
+            <input type="text" class="form-control" id="guest-room-count" style="height: 30px;">
+          </div>
+          <div class="form-group">
+            <label for="name">Check-in Date: </label>
+            <input type="text" class="form-control" id="checkin" style="height: 30px;">
+          </div>
+          <div class="form-group">
+            <label for="name">Check-out Date: </label>
+            <input type="text" class="form-control" id="checkout" style="height: 30px;">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Guest phone number:</label>
+            <input type="text" class="form-control" id="guest-phone" style="height: 30px;">
+          </div>
+          <button type="submit" class="btn indigo darken-3" id="create-guest">Submit
+            Reservation<i class="material-icons right">group</i></button>
+        </form>
+      </div>
+      <div class="col s1"></div>
+      <div class="col s5 card adjust z-depth-3 grey lighten-5"
+        style="margin-top: 40px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
+        <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-In:</h5>
+        <ul>
+          {{#each Guest}}
+          {{#unless status}}
+          {{> guests/guests-block status=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col s1"></div>
     </div>
-    <div class="col s1"></div>
-    <div class="col s5 card adjust z-depth-3 grey lighten-5"
-      style="margin-top: 40px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-In:</h5>
-      <ul>
-        {{#each Guest}}
-        {{#unless status}}
-        {{> guests/guests-block status=true}}
-        {{/unless}}
-        {{/each}}
-      </ul>
+    <div class="row">
+      <div class="col s1"></div>
+      <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 20px; font-family: sans-serif;"
+        id="infoShow">
+        <h5 class="navy-text text-darken-4">Daily Occupancy:</h5>
+        <table>
+          <tbody>
+            <tr>
+              <td class="tile">
+                <p id="tile1" class="tilestyle center"> 1 </p>
+
+              </td>
+              <td class="tile">
+                <p id="tile2" class="tilestyle center"> 2 </p>
+              </td>
+              <td class="tile">
+                <p id="tile3" class="tilestyle center"> 3 </p>
+              </td>
+              <td class="tile">
+                <p id="tile4" class="tilestyle center"> 4 </p>
+              </td>
+              <td class="tile">
+                <p id="tile5" class="tilestyle center"> 5 </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tile">
+                <p id="tile6" class="tilestyle center"> 6 </p>
+              </td>
+              <td class="tile">
+                <p id="tile7" class="tilestyle center"> 7 </p>
+              </td>
+              <td class="tile">
+                <p id="tile8" class="tilestyle center"> 8 </p>
+              </td>
+              <td class="tile">
+                <p id="tile9" class="tilestyle center"> 9 </p>
+              </td>
+              <td class="tile">
+                <p id="tile10" class="tilestyle center"> 10 </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tile">
+                <p id="tile11" class="tilestyle center"> 11 </p>
+              </td>
+              <td class="tile">
+                <p id="tile12" class="tilestyle center"> 12 </p>
+              </td>
+              <td class="tile">
+                <p id="tile13" class="tilestyle center"> 13 </p>
+              </td>
+              <td class="tile">
+                <p id="tile14" class="tilestyle center"> 14 </p>
+              </td>
+              <td class="tile">
+                <p id="tile15" class="tilestyle center"> 15 </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="tile">
+                <p id="tile16" class="tilestyle center"> 16 </p>
+              </td>
+              <td class="tile">
+                <p id="tile17" class="tilestyle center"> 17 </p>
+              </td>
+              <td class="tile">
+                <p id="tile18" class="tilestyle center"> 18 </p>
+              </td>
+              <td class="tile">
+                <p id="tile19" class="tilestyle center"> 19 </p>
+              </td>
+              <td class="tile">
+                <p id="tile20" class="tilestyle center"> 20 </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col s1"></div>
+      <div class="col s5 card z-depth-4 grey lighten-5"
+        style="margin-top: 20px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
+        <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-Out:</h5>
+        <ul>
+          {{#each Guest}}
+          {{#if status}}
+          <li>
+          {{> guests/guests-block status=false}}
+          <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
+              class="material-icons right">work</i></button>
+          </li>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col s1"></div>
     </div>
-    <div class="col s1"></div>
-  </div>
-  <div class="row">
-    <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 20px; font-family: sans-serif;">
-      <h5 class="navy-text text-darken-4">Daily Occupancy:</h5>
-      <table>
-        <tbody>
-          <tr>
-            <td class="tile">
-                <p id="tile1" class="tilestyle center" guest-id="{{this.id}}"> 1 </p>
-            
-            </td>
-            <td class="tile">
-              <p id="tile2" class="tilestyle center"> 2 </p>
-            </td>
-            <td class="tile">
-              <p id="tile3" class="tilestyle center"> 3 </p>
-            </td>
-            <td class="tile">
-              <p id="tile4" class="tilestyle center"> 4 </p>
-            </td>
-            <td class="tile">
-              <p id="tile5" class="tilestyle center"> 5 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile6" class="tilestyle center"> 6 </p>
-            </td>
-            <td class="tile">
-              <p id="tile7" class="tilestyle center"> 7 </p>
-            </td>
-            <td class="tile">
-              <p id="tile8" class="tilestyle center"> 8 </p>
-            </td>
-            <td class="tile">
-              <p id="tile9" class="tilestyle center"> 9 </p>
-            </td>
-            <td class="tile">
-              <p id="tile10" class="tilestyle center"> 10 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile11" class="tilestyle center"> 11 </p>
-            </td>
-            <td class="tile">
-              <p id="tile12" class="tilestyle center"> 12 </p>
-            </td>
-            <td class="tile">
-              <p id="tile13" class="tilestyle center"> 13 </p>
-            </td>
-            <td class="tile">
-              <p id="tile14" class="tilestyle center"> 14 </p>
-            </td>
-            <td class="tile">
-              <p id="tile15" class="tilestyle center"> 15 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile16" class="tilestyle center"> 16 </p>
-            </td>
-            <td class="tile">
-              <p id="tile17" class="tilestyle center"> 17 </p>
-            </td>
-            <td class="tile">
-              <p id="tile18" class="tilestyle center"> 18 </p>
-            </td>
-            <td class="tile">
-              <p id="tile19" class="tilestyle center"> 19 </p>
-            </td>
-            <td class="tile">
-              <p id="tile20" class="tilestyle center"> 20 </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col s1"></div>
-    <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 20px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-Out:</h5>
-      <ul>
-        {{#each Guest}}
-        {{#if status}}
-        {{> guests/guests-block status=false}}
-        <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
-            class="material-icons right">work</i></button>
-        {{/if}}
-        {{/each}}
-      </ul>
-    </div>
-    <div class="col s1"></div>
   </div>
 </div>
-</div>
 
-<div class = "show" style = "display: none;" data-id="{{this.id}}">
-  hello {{id}}
+<div class="container">
+  <div class="show card" style="display: none; max-height: 300px; overflow-y: auto; margin-top: 200px">
+    <button class="exit btn" style="float: right; margin-right: 40px;margin-top: 25px;">Exit</button>
+    <h1 class="guestInfo center">Guest Information</h1>
+    <p class="info"></p>
+
+  </div>
+
+
+
+
 </div>

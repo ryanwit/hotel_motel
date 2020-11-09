@@ -1,9 +1,7 @@
-<li style = "height: 50px">
+<li>
 	<p style="font-weight: bold;" >
-	Name: {{name}},
-	Rooms: {{rooms}},
-	Check-In: {{checkin}},
-	Check-Out: {{checkout}}
+	Name: {{name}}
+	
 	{{#if status}}
 	<button class="change-status btn btn-primary indigo darken-3" data-id="{{this.id}}" data-newStatus="{{this.status}}" style="height: 35px"> Check In<i class="material-icons right">work</i></button>
 	{{/if}}
