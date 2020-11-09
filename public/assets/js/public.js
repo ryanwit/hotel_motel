@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var occupancy = 0;
-  $.ajax("api/guests", {
+  $.ajax("/guest/api/guests", {
     type: "GET",
   }).then(function (response) {
     occupancy = 0;
@@ -30,9 +30,11 @@ $(document).ready(function () {
       rooms: $("#guest-room-count").val().trim(),
       phone: $("#guest-phone").val().trim(),
       amount: $("#guest-count").val().trim(),
+      checkin: $("#checkin").val().trim(),
+      checkout: $("#checkout").val().trim(),
     };
     // Send the POST request
-    $.ajax("/api/guests", {
+    $.ajax("/guest/api/guests", {
       type: "POST",
       data: newGuest,
     }).then(function (data) {
@@ -52,7 +54,7 @@ $(document).ready(function () {
     var newState = {
       status: newStatus,
     };
-    $.ajax("/api/guests/" + id, {
+    $.ajax("/guest/api/guests/" + id, {
       type: "PUT",
       data: newState,
     }).then(function (response) {
@@ -68,32 +70,16 @@ $(document).ready(function () {
     console.log(id);
     $.ajax({
       method: "DELETE",
-      url: "/api/guests/" + id,
+      url: "/guest/api/guests/" + id,
     }).then(function () {
       window.location.reload();
     });
   });
 
-  VANTA.BIRDS({
-    el: "#vanta",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    backgroundColor: 0x1e2537,
-    color1: 0x23845c
-  })
-
   $(".enterbtn").on("click", function (e) {
     e.preventDefault()
     console.log("click")
-    $("#vanta").css("display", "none").remove()        
-    $("#show").css("display", "block")
-    
-
+    window.location.href = "/guest"
   })
  
 });
