@@ -1,23 +1,38 @@
 <div>
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Satisfy);
+  @import url(https://fonts.googleapis.com/css?family=Satisfy); 
   @import url(https://fonts.googleapis.com/css?family=Six+Caps);
 
-  body {
+  #center {
     text-align: center;
   }
 
 
   .vintage {
     font-family: 'Six Caps', sans-serif;
-    font-size: 100px;
+    font-size: 150px;
     letter-spacing: 10px;
     line-height: 1;
     margin: 0;
     position: relative;
-    color: rgb(1, 1, 44);
   }
 
+  .vintage__top {
+    background: linear-gradient(rgb(1, 1, 44), rgb(1, 1, 44));
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: absolute;
+    z-index: 1;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .vintage__bot {
+    text-shadow: 
+      1px 1px ,
+      4px 2px rgb(160,225,220),
+      6px 4px rgb(165, 230, 225),
+      
+  }
 
   ::placeholder {
     color: rgb(30, 37, 55);
@@ -32,20 +47,21 @@
 
 <div class="container-fluid" id="show" style="background-color: rgb(242, 242, 242);">
 
-
-  <div class="vintage__container" style="display: inline-block;  margin: 25px auto 40px;
-  margin: 25px auto 40px;">
-    <p class="vintage">HOTEL MOTELS</p>
+  <!--Vintage TypeFace -->
+ <div id="center">
+    <div class="vintage__container" style= "display: inline-block; margin: 25px auto 40px;" > 
+      <p class="vintage vintage__top">HOTEL MOTELS</p>
+      <p class="vintage vintage__bot">HOTEL MOTELS</p>
+    </div>
   </div>
-
 
   <div class="row adjust">
     <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="margin-top: 40px; height: 500px;">
+    <div class="col s4 card z-depth-3 grey lighten-5" style="margin-top: 40px; height: 500px; font-family: sans-serif;">
       <form>
         <div class="form-group">
-          <h5 class="navy-text text-darken-4">Guest Information</h5>
-          <label for="name">Guest name:</label>
+          <h5 class="navy-text text-darken-4">Guest Information:</h5>
+          <label for="name">Guest name:</label> 
           <input type="text" class="form-control" id="guest-name" style= "height: 30px;">
         </div>
         <div class="form-group">
@@ -57,11 +73,11 @@
           <input type="text" class="form-control" id="guest-room-count" style= "height: 30px;">
         </div>
         <div class="form-group">
-          <label for="name">Check-in Date:</label>
+          <label for="name">Check-in Date: </label>
           <input type="text" class="form-control" id="checkin" style= "height: 30px;">
         </div>
         <div class="form-group">
-          <label for="name">Check-out Date:</label>
+          <label for="name">Check-out Date: </label>
           <input type="text" class="form-control" id="checkout" style= "height: 30px;">
         </div>
         <div class="form-group">
@@ -74,8 +90,8 @@
     </div>
     <div class="col s1"></div>
     <div class="col s5 card adjust z-depth-3 grey lighten-5"
-      style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guests who have arrived: </h5>
+      style="margin-top: 40px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
+      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-In:</h5>
       <ul>
         {{#each Guest}}
         {{#unless status}}
@@ -88,8 +104,8 @@
   </div>
   <div class="row">
     <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 20px;">
-      <h5 class="navy-text text-darken-4">Daily Occupancy</h5>
+    <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 20px; font-family: sans-serif;">
+      <h5 class="navy-text text-darken-4">Daily Occupancy:</h5>
       <table>
         <tbody>
           <tr>
@@ -165,8 +181,8 @@
       </table>
     </div>
     <div class="col s1"></div>
-    <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 20px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 200px;">Checked in Guests:</h5>
+    <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 20px; max-height: 300px; overflow-y: auto; font-family: sans-serif;">
+      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guest Check-Out:</h5>
       <ul>
         {{#each Guest}}
         {{#if status}}
