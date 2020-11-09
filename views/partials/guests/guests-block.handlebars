@@ -1,9 +1,13 @@
+
+
 <li>
-	<p style="font-weight: bold;" >
-	Name: {{name}}
-	
-	{{#if status}}
-	<button class="change-status btn btn-primary indigo darken-3" data-id="{{this.id}}" data-newStatus="{{this.status}}" style="height: 35px"> Check In<i class="material-icons right">work</i></button>
-	{{/if}}
-</p>
+	{{! DISPLAYING INFORMATION}}
+	<p style="font-weight: bold;">
+		Name: {{name}}
+
+		{{#if status}}
+		<button class="change-status btn btn-primary indigo darken-3" data-id="{{this.id}}" data-newStatus="{{this.status}}"
+			style="height: 35px"> Check In<i class="material-icons right">work</i></button>{{!ICONS}}
+		{{/if}}
+	</p>
 </li>

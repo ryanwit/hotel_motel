@@ -1,4 +1,6 @@
+// GETTING BROWSER READY FOR JQUERY FUNCTION
 $(document).ready(function () {
+  //ROUTE FOR HOME PAGE- RENDER OCCUPANCY BASED ON ROOMS NOT OCCUPIED
   var occupancy = 0;
   $.ajax("/guest/api/guests/", {
     type: "GET",
@@ -9,68 +11,46 @@ $(document).ready(function () {
     });
     renderOccupancy(response);
   });
-
+  //RENDER OCCUPANCY TO DISPLAY OCCUPIED ROOMS IN TABLE
   function renderOccupancy(response) {
     for (i = 0; i < occupancy; i++) {
       if (i < 20) {
-        $(`#tile${i + 1}`).text("X").attr("class", "center green z-depth-2");
-        
-        
-        
+        $(`#tile${i + 1}`)
+          .text("X")
+          .attr("class", "center green z-depth-2");
       } else {
         alert("No rooms available");
       }
-     
-      
     }
-  
+    //APPENDING THE GUESTS INFO ONTO HOME PAGE FOR SOLO DISPLAY
+    var answers = response;
+    $("#infoShow").on("click", function () {
+      $(".remove").empty();
+      for (i = 0; i < answers.length; i++) {
+        console.log(
+          answers[i].name + " " + answers[i].phone + " " + answers[i].checkin
+        );
 
-    var answers = response
-    $("#infoShow").on("click", function(){
-      $(".remove").empty()
-      for (i = 0; i<answers.length; i++){
-        console.log(answers[i].name + " " + answers[i].phone + " " + answers[i].checkin)
+        $(".show").append(`<div class="remove">
+        <p><span class = "bold">Guest Name:</span> ${answers[i].name}</p>
+        <p><span class="bold">Guest Phone Number:</span> ${answers[i].phone}</p>
+        <p><span class="bold"> Rooms:</span> ${answers[i].rooms}</p>
+        <p><span class="bold"> Check-In: </span> ${answers[i].checkin}</p>
+        <p><span class="bold"> Check-Out: </span> ${answers[i].checkout}</p>
+        <hr>
+        </div`);
 
-         $(".show").append(`<div class="remove">
-         <p><span class = "bold">Guest Name:</span> ${answers[i].name}</p>
-
-         <p><span class="bold">Guest Phone Number:</span> ${answers[i].phone}</p>
-         <p><span class="bold"> Rooms:</span> ${answers[i].rooms}</p>
-         <p><span class="bold"> Check-In: </span> ${answers[i].checkin}</p>
-         <p><span class="bold"> Check-Out: </span> ${answers[i].checkout}</p>
-
-          <hr>
-          </div`)
-
-        $(".bold").css("font-weight", "bold")
-        $(".remove").css("margin-left", "40px")
-        $(".remove").css("margin-right", "40px")
-         
-
-        $(".show").css("display", "block")
-        $("#infoGone").css("display", "none")
-
-        
-
-        
-
-        
-       
-
-        
+        $(".bold").css("font-weight", "bold");
+        $(".remove").css("margin-left", "40px");
+        $(".remove").css("margin-right", "40px");
+        $(".show").css("display", "block");
+        $("#infoGone").css("display", "none");
       }
-     
-    })
-
-  
-    
+    });
   }
-
+  //CREATING A GUEST
   $("#create-guest").on("click", function (event) {
-
     event.preventDefault();
-
-    // Creates new guest
     var newGuest = {
       name: $("#guest-name").val().trim(),
       rooms: $("#guest-room-count").val().trim(),
@@ -79,38 +59,31 @@ $(document).ready(function () {
       checkin: $("#checkin").val().trim(),
       checkout: $("#checkout").val().trim(),
     };
-    // Send the POST request
+    // POST REQUEST
     $.ajax("/guest/api/guests", {
       type: "POST",
       data: newGuest,
     }).then(function (data) {
-      console.log(data);
-      //reload page to get updated list
       window.location.reload();
     });
   });
-
+  //CHECKING IN A GUEST AND CHANGING THEIR STATUS
   $(".change-status").on("click", function (event) {
-    // renderOccupancy();
     var id = $(this).data("id");
-    console.log(id);
     var newStatus = $(this).attr("data-newStatus");
-    console.log(newStatus);
-    // Send the PUT request.
     var newState = {
       status: newStatus,
     };
+    //PUT REQUEST
     $.ajax("/guest/api/guests/" + id, {
       type: "PUT",
       data: newState,
     }).then(function (response) {
       console.log("changed status to", newState);
-      console.log(response);
-      // Reload the page to get the updated list
       window.location.reload();
     });
   });
-
+  //DELETES GUEST AND THEIR INFO ONCE THEY HAVE CHECKED OUT
   $(".delete").on("click", function () {
     var id = $(this).data("id");
     console.log(id);
@@ -121,38 +94,25 @@ $(document).ready(function () {
       window.location.reload();
     });
   });
-
+  //ENTER BUTTON TO LEAD SPLASH PAGE INTO HOME PAGE
   $(".enterbtn").on("click", function (e) {
-    e.preventDefault()
-    console.log("click")
-    window.location.href = "/guest"
+    e.preventDefault();
+    console.log("click");
+    window.location.href = "/guest";
   });
 
-  // Creates the date drop down when user selects check-in date
-  $(function() {
+  //DROPDOWN CALENDAR FOR CHECK-IN
+  $(function () {
     $("#checkin").datepicker();
   });
-
-   // Creates the date drop down when user selects check-out date
-  $(function() {
+  //DROPDOWN CALENDAR FOR CHECK-OUT
+  $(function () {
     $("#checkout").datepicker();
   });
-
-  
-          
-  $(".exit").on("click", function(e){
-    e.preventDefault()
-    $(".show").css("display", "none")
-    $("#infoGone").css("display", "block")
-   
-
-  })
- 
+  //EXIT THE POPUP SCREEN TO RETURN TO HOME
+  $(".exit").on("click", function (e) {
+    e.preventDefault();
+    $(".show").css("display", "none");
+    $("#infoGone").css("display", "block");
+  });
 });
-
-
-
-
-
-
-

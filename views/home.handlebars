@@ -47,7 +47,7 @@
 
   <div class="container-fluid" id="infoGone" style="background-color: rgb(242, 242, 242);">
 
-    <!--Vintage TypeFace -->
+    <!--VINTAGE TYPEFACE -->
     <div id="center">
       <div class="vintage__container" style="display: inline-block; margin: 25px auto 40px;">
         <p class="vintage vintage__top">HOTEL MOTELS</p>
@@ -190,9 +190,9 @@
           {{#each Guest}}
           {{#if status}}
           <li>
-          {{> guests/guests-block status=false}}
-          <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
-              class="material-icons right">work</i></button>
+            {{> guests/guests-block status=false}}
+            <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
+                class="material-icons right">work</i></button>
           </li>
           {{/if}}
           {{/each}}
