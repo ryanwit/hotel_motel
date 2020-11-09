@@ -110,9 +110,8 @@
         <tbody>
           <tr>
             <td class="tile">
-              <div class="tile">
-                <p id="tile1" class="tilestyle center"> 1 </p>
-              </div>
+                <p id="tile1" class="tilestyle center" guest-id="{{this.id}}"> 1 </p>
+            
             </td>
             <td class="tile">
               <p id="tile2" class="tilestyle center"> 2 </p>
@@ -197,4 +196,8 @@
     <div class="col s1"></div>
   </div>
 </div>
+</div>
+
+<div class = "show" style = "display: none;" data-id="{{this.id}}">
+  hello {{id}}
 </div>

@@ -1,24 +1,36 @@
 $(document).ready(function () {
   var occupancy = 0;
-  $.ajax("/guest/api/guests", {
+  $.ajax("/guest/api/guests/", {
     type: "GET",
   }).then(function (response) {
     occupancy = 0;
     response.forEach((room) => {
       return (occupancy += room.rooms);
     });
-    renderOccupancy();
-    console.log(response);
+    renderOccupancy(response);
   });
 
-  function renderOccupancy() {
+  function renderOccupancy(response) {
     for (i = 0; i < occupancy; i++) {
       if (i < 20) {
         $(`#tile${i + 1}`).text("X").attr("class", "center green z-depth-2");
+        
+        
+        
       } else {
         alert("No rooms available");
       }
+     
+      
     }
+
+    var answers = response
+    $(`#tile${i + 1}`).on("click", function(){
+      for (i = 0; i<answers.length; i++){
+        console.log(answers[i])
+      }
+    })
+    
   }
 
   $("#create-guest").on("click", function (event) {
@@ -94,6 +106,7 @@ $(document).ready(function () {
   });
  
 });
+
 
 
 
