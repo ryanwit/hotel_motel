@@ -1,6 +1,5 @@
 
 module.exports = function(sequelize, DataTypes) {
-
     // Create table "Guests" with columns name, rooms, and phone
     var Guest = sequelize.define( "Guest", {
         id: {
@@ -22,7 +21,13 @@ module.exports = function(sequelize, DataTypes) {
         },
         amount: {
             type: DataTypes.INTEGER
-        }
+        },
+        checkin: {
+            type: DataTypes.STRING,
+        },
+        checkout: {
+            type: DataTypes.STRING,
+        },
     });
     return Guest
 };

@@ -1,3 +1,4 @@
+<div>
 <style>
   @import url(https://fonts.googleapis.com/css?family=Satisfy);
   @import url(https://fonts.googleapis.com/css?family=Six+Caps);
@@ -27,153 +28,7 @@
     background-color: rgb(0, 209, 255)
   }
 </style>
-
-
-
-<div class="container-fluid" id="show" style="display:none; background-color: rgb(242, 242, 242);">
-
-
-  <div class="vintage__container" style="display: inline-block;  margin: 25px auto 40px;
-  margin: 25px auto 40px;">
-    <p class="vintage">HOTEL MOTELS</p>
-  </div>
-
-
-  <div class="row adjust">
-    <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="margin-top: 40px; height: 350px;">
-      <form>
-        <div class="form-group">
-          <h5 class="navy-text text-darken-4">Guest Information</h5>
-          <label for="name">Guest name:</label>
-          <input type="text" class="form-control" id="guest-name" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Number of Guests:</label>
-          <input type="text" class="form-control" id="guest-count" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="name">Number of rooms:</label>
-          <input type="text" class="form-control" id="guest-room-count" style= "height: 30px;">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Guest phone number:</label>
-          <input type="text" class="form-control" id="guest-phone" style= "height: 30px;">
-        </div>
-        <button type="submit" class="btn indigo darken-3" id="create-guest">Submit
-          Reservation<i class="material-icons right">group</i></button>
-      </form>
-    </div>
-    <div class="col s1"></div>
-    <div class="col s5 card adjust z-depth-3 grey lighten-5"
-      style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 150px;">Guests who have arrived: </h5>
-      <ul>
-        {{#each Guest}}
-        {{#unless status}}
-        {{> guests/guests-block status=true}}
-        {{/unless}}
-        {{/each}}
-      </ul>
-    </div>
-    <div class="col s1"></div>
-  </div>
-  <div class="row">
-    <div class="col s1"></div>
-    <div class="col s4 card z-depth-3 grey lighten-5" style="height: auto; margin-top: 40px;">
-      <h5 class="navy-text text-darken-4">Daily Occupancy</h5>
-      <table>
-        <tbody>
-          <tr>
-            <td class="tile">
-              <div class="tile">
-                <p id="tile1" class="tilestyle center"> 1 </p>
-              </div>
-            </td>
-            <td class="tile">
-              <p id="tile2" class="tilestyle center"> 2 </p>
-            </td>
-            <td class="tile">
-              <p id="tile3" class="tilestyle center"> 3 </p>
-            </td>
-            <td class="tile">
-              <p id="tile4" class="tilestyle center"> 4 </p>
-            </td>
-            <td class="tile">
-              <p id="tile5" class="tilestyle center"> 5 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile6" class="tilestyle center"> 6 </p>
-            </td>
-            <td class="tile">
-              <p id="tile7" class="tilestyle center"> 7 </p>
-            </td>
-            <td class="tile">
-              <p id="tile8" class="tilestyle center"> 8 </p>
-            </td>
-            <td class="tile">
-              <p id="tile9" class="tilestyle center"> 9 </p>
-            </td>
-            <td class="tile">
-              <p id="tile10" class="tilestyle center"> 10 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile11" class="tilestyle center"> 11 </p>
-            </td>
-            <td class="tile">
-              <p id="tile12" class="tilestyle center"> 12 </p>
-            </td>
-            <td class="tile">
-              <p id="tile13" class="tilestyle center"> 13 </p>
-            </td>
-            <td class="tile">
-              <p id="tile14" class="tilestyle center"> 14 </p>
-            </td>
-            <td class="tile">
-              <p id="tile15" class="tilestyle center"> 15 </p>
-            </td>
-          </tr>
-          <tr>
-            <td class="tile">
-              <p id="tile16" class="tilestyle center"> 16 </p>
-            </td>
-            <td class="tile">
-              <p id="tile17" class="tilestyle center"> 17 </p>
-            </td>
-            <td class="tile">
-              <p id="tile18" class="tilestyle center"> 18 </p>
-            </td>
-            <td class="tile">
-              <p id="tile19" class="tilestyle center"> 19 </p>
-            </td>
-            <td class="tile">
-              <p id="tile20" class="tilestyle center"> 20 </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col s1"></div>
-    <div class="col s5 card z-depth-4 grey lighten-5" style="margin-top: 40px; max-height: 300px; overflow-y: auto;">
-      <h5 class="navy-text text-darken-4" style="margin-right: 200px;">Checked in Guests:</h5>
-      <ul>
-        {{#each Guest}}
-        {{#if status}}
-        {{> guests/guests-block status=false}}
-        <button class="btn indigo darken-3 delete" data-id="{{this.id}}">Check Out<i
-            class="material-icons right">work</i></button>
-        {{/if}}
-        {{/each}}
-      </ul>
-    </div>
-    <div class="col s1"></div>
-  </div>
-</div>
-<div class="container-fluid" style="display:block" id="vanta">
+<div class="container-fluid"  id="vanta">
   <div class="row">
     <div class="col s3"></div>
     <div class="col s6"
@@ -198,4 +53,19 @@
       <div class="col s12"></div>
     </div>
   </div>
+</div>
+<script>
+  VANTA.BIRDS({
+    el: "#vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    backgroundColor: 0x1e2537,
+    color1: 0x23845c
+  })
+</script>
 </div>

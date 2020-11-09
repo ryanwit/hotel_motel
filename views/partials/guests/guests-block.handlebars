@@ -2,7 +2,9 @@
 	<p style="font-weight: bold;" >
 	Name: {{name}},
 	Guests: {{amount}},
-	Rooms: {{rooms}}
+	Rooms: {{rooms}},
+	Check-In: {{checkin}},
+	Check-Out: {{checkout}}
 	{{#if status}}
 	<button class="change-status btn btn-primary" data-id="{{this.id}}" data-newStatus="{{this.status}}" style= "float: right; height: 35px"> Check In</button>{{/if}}
 </p>
