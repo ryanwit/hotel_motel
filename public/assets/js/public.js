@@ -22,6 +22,7 @@ $(document).ready(function () {
   }
 
   $("#create-guest").on("click", function (event) {
+
     event.preventDefault();
 
     // Creates new guest
@@ -80,7 +81,17 @@ $(document).ready(function () {
     e.preventDefault()
     console.log("click")
     window.location.href = "/guest"
-  })
+  });
+
+  // Creates the date drop down when user selects check-in date
+  $(function() {
+    $("#checkin").datepicker();
+  });
+
+   // Creates the date drop down when user selects check-out date
+  $(function() {
+    $("#checkout").datepicker();
+  });
  
 });
 
