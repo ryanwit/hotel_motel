@@ -24,7 +24,7 @@ When a guest is checked-out, the the guest is removed from the database and the 
 
 The video shows the working application. The employee can login in the welcome page. Once inside the application the user can add new guests to the hotel, check-in guests, check-out guests, and view the hotel occupancy capacity.
 
-![Walkthrough Video](./applicationVideo.gif)
+![Walkthrough Video](./raw/main/applicationVideo.gif)
 
 ## Installation
 
@@ -33,8 +33,11 @@ Steps to install project include:
 
 ## Usage 
 
-![Getting Started](./public/assets/imgs/loginScreen.PNG)
+![Getting Started](./raw/main/splash.PNG)
 * User is directed to the login page where they can provide credentials to enter the management system. 
+
+![Getting Started](./raw/main/mainScreen.PNG)
+* Once logged in the user can add a guest, check-in a guest, check-out a guest, or view hotel occupancy.  
 
 ## Credits
 
@@ -62,4 +65,5 @@ This project is licensed under MIT.
 ## Future-Development
 
 Future development for this application would include adding passport to the authentication login page. As of now the splash page congaing the login information is not a true authentication, no user data is stored or compared to a database for a true secure login. This is something we could add to our application. 
+
 Another future development for this application is to turn this into a phone app. This would allow for small businesses to run an entire hotel management system off of their phone with our easy, simple to use guest management system.
